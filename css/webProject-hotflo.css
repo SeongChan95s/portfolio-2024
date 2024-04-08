@@ -11,7 +11,17 @@
   background: linear-gradient(132deg, #EE7937 0%, #FD685F 29.89%, #E84E43 71.18%, #DF2489 100%);
 }
 
+#webProject-hotflo #details{
+  padding-top:120px;
+  background:#fff;
+}
+/* tablet & mobile device : ~ 1024px */
+@media ( max-width: 1024px ) {
+#webProject-hotflo #details{padding-top:60px;}
+  
+}
 /* mobile device : ~ 767px */
 @media ( max-width: 767px ) {
   #webProject-hotflo li:last-child .thumb{height:300px;}
 }
+

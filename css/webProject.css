@@ -242,7 +242,7 @@ h5{
 
 /* ====== overview section ====== */
 /* ------ intro article ------ */
-#intro header{padding: 10vmax 0 1.4vmax 0;}
+#intro header{padding: calc(80px + 4vh) 0 1.4vmax 0;}
 #intro .rolling-banner{
   font-size:14vmax;
 }

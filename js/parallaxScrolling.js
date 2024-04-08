@@ -43,7 +43,7 @@ ScrollTrigger.config({
 /* 높이값 감지하여 locomotive scroll 업데이트 */
 // new ResizeObserver(() => ScrollTrigger.refresh()).observe(container);
 
-
+// window.addEventListener('load', ScrollTrigger.refresh());
 
 
 

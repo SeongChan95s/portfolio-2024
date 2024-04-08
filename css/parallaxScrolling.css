@@ -45,7 +45,8 @@ html.has-scroll-smooth .bg-gap-fix{margin-top: -2px;}
 
 
 /* ------ loading_screen ------ */
-html.has-scroll-smooth #loading_screen{
+#loading_screen{display:none;}
+html[data-ismobile="false"] #loading_screen{
   position: fixed;
   flex-direction: column;
   top:0;
@@ -60,7 +61,7 @@ html.has-scroll-smooth #loading_screen{
   justify-content: center;
   align-items: center;
 }
-html.has-scroll-smooth #loading_screen .loader {
+html[data-ismobile="false"] #loading_screen .loader {
   position: relative;
   width: 64px;
   height: 64px;
@@ -68,7 +69,7 @@ html.has-scroll-smooth #loading_screen .loader {
   transform: rotate(45deg);
   overflow: hidden;
 }
-html.has-scroll-smooth #loading_screen .loader:after{
+html[data-ismobile="false"] #loading_screen .loader:after{
   content: '';
   position: absolute;
   inset: 8px;
@@ -76,7 +77,7 @@ html.has-scroll-smooth #loading_screen .loader:after{
   background: var(--black-color-normal);
   background-color:var(--primary-color-normal);
 }
-html.has-scroll-smooth #loading_screen .loader:before{
+html[data-ismobile="false"] #loading_screen .loader:before{
   content: '';
   position: absolute;
   inset: -15px;
@@ -92,7 +93,7 @@ html.has-scroll-smooth #loading_screen .loader:before{
     transform: translate(0px , 0px) rotate(-45deg)
   }
 }
-html.has-scroll-smooth #loading_screen p{
+html[data-ismobile="false"] #loading_screen p{
   font-size:3rem;
   color:#fff;
   margin-top: 2rem;
