@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+
+
+
+
+/* ====== 
+
+  font-face 
+
+====== */
+
+
+/* -----
+
+  basic 
+
+----- */
+/* 한글, 숫자, 특수문자 */
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: local('Pretendard Variable'), url('../fonts/PretendardVariable.woff2') format('woff2-variations');
+  unicode-range: U+AC00-D7A3;
+}
+
+/* 영문 대, 소문자 */
+/* Roboto-thin */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Roboto-Thin.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A; 
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+  src: url('../fonts/Roboto-ThinItalic.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A; 
+}
+
+/* Roboto-light */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Roboto-Light.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A; 
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  src: url('../fonts/Roboto-LightItalic.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A; 
+}
+
+/* Roboto-Regular */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A; 
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url('../fonts/Roboto-RegularItalic.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A; 
+}
+
+/* Roboto-Medium */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A; 
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url('../fonts/Roboto-MediumItalic.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A; 
+}
+
+/* Roboto-bold */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A; 
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url('../fonts/Roboto-BoldItalic.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A; 
+}
+
+/* Roboto-Black */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Roboto-Black.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A; 
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+  src: url('../fonts/Roboto-BlackItalic.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A; 
+}
+
+
+
+
+
+/* -----
+
+  etc
+
+----- */
+
+
+/* English */
+/* 살짝 두꺼운 제목 */
+@font-face{
+  font-family: 'Heebo';
+  src: url("../fonts/Heebo-VariableFont_wght.ttf");
+}
+/* 가늘고 두꺼운 제목 */
+@font-face{
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeue-Regular.otf");
+}
+
+/* 필기체 */
+@font-face{
+  font-family: 'MarkMyWords';
+  src: url("../fonts/mark_my_words.ttf");
+}
+
+
+
+/* ====== 
+
+  basic style
+
+====== */
+
+html, body{
+  font-family: "Pretendard Variable", "Roboto", sans-serif;
+  font-weight: 400;
+  line-height:1.45;
+  -webkit-text-size-adjust : none;  /* 크롬, 사파리, 오페라 신버전 */
+  -ms-text-size-adjust : none;  /* IE */
+  -moz-text-size-adjust : none;  /* 파이어폭스 */
+  -o-text-size-adjust : none;  /* 오페라 구버전 */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+a{color:var(--black-color);}
+h1, h2, h3, h4, h5, h6{line-height: 1;}
+h2{
+  font-family: "BebasNeue";
+  font-weight: 500;
+  font-size:clamp(54px, 4.6vw, 86px);
+  letter-spacing:-0.07rem;
+  color:var(--black-color-dark);
+}
+h4{
+  /* font-size:var(--font-size-title-md); */
+  font-weight: 500;
+}
+
+
+/* desktop device : 1025px ~ */
+@media screen and (min-width:1025px){
+  html{font-size:17px;}
+}
+
+/* tablet device : 768 ~ 1024px */
+@media screen and (min-width:768px) and (max-width:1024px){
+  html{font-size:16.5px;}
+  h2{
+    font-size:52px;
+  }
+}
+
+/* mobile device : ~767px */
+@media screen and (max-width:767px){
+  html{font-size:16px;}
+  h2{font-size:var(--font-size-display-md);}
+}
+
+
+
+/* ====== line ====== */
+.line-nowrap{
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+.line-wrap{
+  overflow: hidden;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  /* -webkit-line-clamp: 3 */ /* 원하는 글자 수 */
+}
+.txt{
+  word-break:keep-all;
+}
+
+
+

@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+
+
+
+/* ====== 
+
+  token 
+
+====== */
+
+
+:root{
+  
+  /* ====== color ====== */
+  --primary-color-dim:#eaeeff;
+  --primary-color-light:#1C58C6;
+  --primary-color-normal:#131CAC;
+  --primary-color-dark:#282d7d;
+  --primary-color-darker:#13186E;
+  
+  --secondary-color-dim:#FFFDF8;
+  --secondary-color-light:#FFFCF4;
+  --secondary-color-normal:#FFFCE0;
+  --secondary-color-dark:#FFFCE0;
+  --secondary-color-darker:#B21D60;
+  
+  --surface-color-light:#F9F9FF;
+  --surface-color-noraml:#F3F3FA;
+  --surface-color-dark:#EDEDF4;
+  --surface-color-darker:#E7E8EE;
+
+  --white-color-normal:#fdfdfd;
+  --white-color-dark:#f5f5f5;
+  
+  --gray-color-dim:#ccc;
+  --gray-color-light: #a5a5a5;
+  --gray-color-normal:#999999;
+  --gray-color-dark:#666666;
+
+  --black-color-dim:#4e4e4e;
+  --black-color-light:#353535;
+  --black-color-normal:#202020;
+  --black-color-dark:#191C20;
+
+  
+  /* ====== typography ====== */
+  /* display */
+  --font-size-display-lg:3.5625rem; /* 57px */
+  --font-weight-display-lg:600;
+
+  --font-size-display-md:2.8125rem; /* 45px */
+  --font-weight-display-md:600;
+
+  --font-size-display-sm:2.25rem; /* 36px */
+  --font-weight-display-sm:600;
+
+  /* headline */
+  --font-size-headline-lg:2rem; /* 32px */
+  --font-weight-headline-lg:500;
+
+  --font-size-headline-md:1.75rem; /* 28px */
+  --font-weight-headline-md:500;
+
+  --font-size-headline-sm:1.5rem; /* 24px */
+  --font-weight-headline-sm:500;
+
+  /* title */
+  --font-size-title-lg:1.375rem; /* 22px */
+  --font-weight-title-lg:500;
+
+  --font-size-title-md: 1rem; /* 16px */
+  --font-weight-title-md: 500;
+
+  --font-size-title-sm: 0.875rem; /* 14px */
+  --font-weight-title-sm: 500;
+
+  /* body */
+  --font-size-body-lg: 1rem; /* 16px */
+  --font-weight-body-md: 400;
+  
+  --font-size-body-md: 0.875rem; /* 14px */
+  --font-weight-body-md: 400;
+
+  --font-size-body-sm:0.75rem; /* 12px */
+  --font-weight-body-sm: 400;
+
+  /* label */
+  --font-size-label-lg:0.875rem; /* 14px */
+  --font-weight-label-lg:500;
+
+  --font-size-label-md:0.75rem; /* 12px */
+  --font-weight-label-md:500;
+
+  --font-size-label-sm:0.6875rem; /* 11px */
+  --font-weight-label-sm:500;
+
+  
+
+
+  /* ====== effect ====== */
+
+  /* ------ transition ------ */
+  --transit-curve-lg:all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+  --transit-curve-md: opacity 1.2s cubic-bezier(.215,.61,.355,1),transform 1.2s cubic-bezier(.215,.61,.355,1);;
+  --transit-curve-sm:opacity .6s cubic-bezier(.215,.61,.355,1), transform .6s cubic-bezier(.215,.61,.355,1);
+
+  /* ------ drop-shadow ------ */
+  --drop-shadow-lg:drop-shadow(8px 16px 16px hsl(0deg 0% 0% / 0.25));
+  --drop-shadow-md:drop-shadow(4px 8px 8px hsl(0deg 0% 0% / 0.38));
+  --drop-shadow-sm:drop-shadow(1px 2px 3px rgba(0,0,0,0.3));
+
+  --drop-shadow-deep-md:drop-shadow(4px 8px 8px hsl(0deg 0% 0% / 0.5));
+  --drop-shadow-deep-sm:drop-shadow(1px 2px 5px rgba(0,0,0,0.6));
+
+
+  /* ------ rotate ------ */
+  --rotate-before-sm:rotate(38deg);
+  --rotate-after-sm:rotate(-4deg);
+
+
+  /* ====== design ====== */
+  /* ------ backdrop filter ------ */
+  --backDrop-filter-lg:blur(15px);
+  --backDrop-filter-sm:blur(4px);
+
+
+  /* ------ filter ------ */
+  --white-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(151deg) brightness(110%) contrast(101%) !important;
+
+
+  /* ====== layout ====== */
+  /* padding */
+  --inner-pd:24px;
+
+  /* border-radius */
+  --border-radius-lg:30px;
+  --border-radius-md:24px;
+  --border-radius-sm:16px;
+
+  /* glass material */
+  --glass-dark-backdrop-filter: blur(50px);
+
+  --glass-dark-lg-background:rgba(16, 16, 16, 0.9);
+  --glass-dark-md-background:rgba(16, 16, 16, 0.85);
+  --glass-dark-sm-background:rgba(16, 16, 16, 0.8);
+}
+
+
+
+/* tablet & mobile device : ~ 1024px */
+@media ( max-width: 1024px ) {
+  :root{
+    /* padding */
+    --inner-pd:18px;
+  }
+  
+}
+
+
+/* mobile device : ~ 767px */
+@media ( max-width: 767px ) {
+  :root{
+    /* padding */
+    --inner-pd:16px;
+  }
+  
+}
+
+
+
+
+
+/* ======
+
+  etc
+  
+====== */
+
+
+/* glass container */
+.glass-container-light-lg{
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  background: rgba(224, 224, 255, 0.4);
+}
+.glass-container-light-sm{
+  background: var(rgba(37, 37, 37, 0.82), linear-gradient(0deg, #8C8C8C 0%, #8C8C8C 100%), rgba(37, 37, 37, 0.82));
+  background-blend-mode: overlay, normal;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+}
+.glass-container-normal-lg{
+  background: rgba(88, 84, 97, 0.25);
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+}

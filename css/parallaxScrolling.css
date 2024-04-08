@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+
+
+
+
+/* ====== 
+
+  basic setting
+  
+====== */
+
+
+/* ------ 
+
+  locomotive가 켜져있을 때 : desktop
+
+------ */
+
+/* scrollTrigger with locomotive scroll */
+html.has-scroll-smooth {
+  width:100%;
+  height:100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+html.has-scroll-smooth,
+.has-scroll-smooth body {overflow: hidden;} 
+html.has-scroll-smooth .section{
+  position: relative;
+  width: 100%;
+  perspective:1px;
+}
+html.has-scroll-smooth .bg-gap-fix{margin-top: -2px;}
+/* locomotive scroll에서 화면 깜빡임 보정 */
+
+
+/* ------ loading_screen ------ */
+html.has-scroll-smooth #loading_screen{
+  position: fixed;
+  flex-direction: column;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index:99;
+  background:var(--black-color-normal);
+  touch-action:none;
+  overflow:hidden;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+html.has-scroll-smooth #loading_screen .loader {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+html.has-scroll-smooth #loading_screen .loader:after{
+  content: '';
+  position: absolute;
+  inset: 8px;
+  margin: auto;
+  background: var(--black-color-normal);
+  background-color:var(--primary-color-normal);
+}
+html.has-scroll-smooth #loading_screen .loader:before{
+  content: '';
+  position: absolute;
+  inset: -15px;
+  margin: auto;
+  background: #ffffff;
+  animation: diamondLoader 2s linear infinite;
+}
+@keyframes diamondLoader {
+  0%  ,10% {
+    transform: translate(-64px , -64px) rotate(-45deg)
+  }
+  90% , 100% {
+    transform: translate(0px , 0px) rotate(-45deg)
+  }
+}
+html.has-scroll-smooth #loading_screen p{
+  font-size:3rem;
+  color:#fff;
+  margin-top: 2rem;
+  font-family: "BebasNeue";
+}
+
+/* ------ scrollbar ------ */
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+
+
+/* ------ 
+
+  locomotive가 꺼져있을 때 : mobile 
+
+------ */
+html[data-ismobile="true"] .smooth-scroll{width:100%;}
+html[data-ismobile="true"] .section{overflow: hidden;}
+html[data-ismobile="true"] #loading_screen{display:none;}
+
+
+
+
+
+/* ====== 
+
+  parallax function
+  
+====== */
+
+/* ====== dynamic background ====== */
+.dynamic-background{
+  perspective: 1px;
+  position: relative;
+  min-height:100vh;
+  overflow-y:hidden !important;
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position:0 0;
+}
+
+
+
+
+/* ====== Performance improvement ====== */
+.will .will-tg{will-change:transform;} /* toggleClass : "will" */
+
+
+
+
+/* ====== parallax bg ====== */
+.parallax-bg{
+  transition: background-position .3s cubic-bezier(.215,.61,.355,1);
+  background-repeat:no-repeat;
+  background-position-x:50%;
+  background-position-y:50%;
+  background-size:cover;
+}
+/* 가로<세로일 경우 */
+.parallax-bg.col{
+  background-size:auto calc(100% + 30%); 
+}
+/* 가로>세로일 경우 */
+.parallax-bg.row{
+  background-size:calc(100% + 30%) auto; 
+}
+
+/* tablet & mobile device : ~ 1024px */
+@media ( max-width: 1024px ) {
+  /* 가로<세로일 경우 */
+  .parallax-bg.col{
+    background-size:auto calc(100% + 20%); 
+  }
+  /* 가로>세로일 경우 */
+  .parallax-bg.row{
+    background-size:auto calc(100% + 20%); 
+  }
+}
+/* mobile device : ~ 767px */
+@media ( max-width: 767px ) {
+    .parallax-bg.col,
+    .parallax-bg.row{
+      background-size:cover; 
+    }
+}
+
+
+
+
+.bg-move-fast{
+  transition: background-position 1s cubic-bezier(.215,.61,.355,1);
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.bg-move-slow{
+  transition: background-position 1s cubic-bezier(.215,.61,.355,1);
+  background-size:cover;
+  background-repeat:no-repeat;
+}

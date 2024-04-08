@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+
+
+
+
+#webProject-hotflo #overview .overview-bg{
+  background-image:url(../images/webProject/hotflo/overview_bg.jpg);
+}
+#webProject-hotflo .gradient-bg{
+  background: linear-gradient(132deg, #EE7937 0%, #FD685F 29.89%, #E84E43 71.18%, #DF2489 100%);
+}
+
+/* mobile device : ~ 767px */
+@media ( max-width: 767px ) {
+  #webProject-hotflo li:last-child .thumb{height:300px;}
+}

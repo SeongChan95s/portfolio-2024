@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+
+#webProject-lifesBeer #overview .overview-bg{
+  background-image:url(../images/webProject/lifesBeer/overview_bg.jpg);
+}
+
+#webProject-lifesBeer .gradient-bg{
+  background: linear-gradient(132deg, #5496C0 0%, #3381B4 29.89%, #0062A1 71.18%, #005993 104.33%);
+}

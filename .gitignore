@@ -1,0 +1,27 @@
+.gitgnore
+
+# 시스템 파일
+.DS_*
+*.log
+**/*.backup.*
+**/*.back.*
+
+# 이미지 파일
+images/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+
+# 폰트
+fonts/
+
+# 작업 파일
+*.psd
+*.thumb
+*.sketch
+
+# 라이브러리
+vendor/
+node_modules/
