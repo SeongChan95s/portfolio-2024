@@ -23,7 +23,7 @@
   font-style: normal;
   font-display: swap;
   src: local('Pretendard Variable'), url('../fonts/PretendardVariable.woff2') format('woff2-variations');
-  unicode-range: U+AC00-D7A3;
+  /* unicode-range: U+AC00-D7A3; */
 }
 
 /* 영문 대, 소문자 */
@@ -144,7 +144,11 @@
   etc
 
 ----- */
-
+/* 필기체 */
+@font-face{
+  font-family: 'Jalnan2';
+  src: url("../fonts/JalnanOTF.otf");
+}
 
 /* English */
 /* 살짝 두꺼운 제목 */

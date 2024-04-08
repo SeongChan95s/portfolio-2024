@@ -27,7 +27,7 @@
 }
 body{
   color:var(--black-color-dark);
-  background-color:var(--white-color-normal);
+  background-color:#fafafa;
   /* background-color:var(--secondary-color-dim); */
 }
 a{ 
@@ -258,6 +258,7 @@ a, button, .click-tg
   fill:var(--primary-color-webProject);
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
+  stroke-width:0.02em;
   -webkit-animation: dash 4s linear forwards, filling 3s ease-in forwards;
   animation: dash 4s linear forwards, filling 3s ease-in forwards;
   -webkit-animation-play-state: paused;
@@ -506,7 +507,7 @@ a, button, .click-tg
   border:1px solid var(--black-color-normal);
   border-radius:99px;
   font-size:0.8125rem;
-  font-weight:500;
+  font-weight:600;
   line-height: 1;
   display:block;
   overflow: hidden !important;
