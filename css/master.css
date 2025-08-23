@@ -626,7 +626,7 @@ a, button, .click-tg
 .toolTip {
   position: relative;
   display:inline-block;
-  background:url(../images/icons/question.png)0 0/cover no-repeat;
+  background:url("https://seongchan-portfolio-2024.s3.ap-northeast-2.amazonaws.com/index/icons/question.png")0 0/cover no-repeat;
   width:.8125rem;
   height:.8125rem;
   margin:0 6px 0.2em 3px;
