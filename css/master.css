@@ -1292,7 +1292,7 @@ a, button, .click-tg
 
 /* ====== mainFooter : contact ====== */
 #main_footer{
-  height:calc(var(--vh, 1vh) * 60);
+  height:calc(var(--vh, 1vh) * 100);
 }
 #main_footer .inner{
   flex-direction: column;
@@ -1357,6 +1357,7 @@ a, button, .click-tg
 
 /* tablet device : ~ 1024px */
 @media ( max-width: 1024px ) {
+  #main_footer{height:calc(var(--vh, 1vh) * 50);}
   #main_footer .main p{font-size:1.3rem}
   #main_footer .section-header{margin-bottom: 0.7rem;}
 }
